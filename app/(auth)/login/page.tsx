@@ -19,10 +19,6 @@ export default async function Login() {
   const [providers, setProviders] = useState(null);
   const [formData, setFormData] = useState<IFormData | null>(null);
 
-<<<<<<< HEAD
-  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
   useEffect(() => {
     const fetchProviders = async () => {
       const res = await getProviders();
