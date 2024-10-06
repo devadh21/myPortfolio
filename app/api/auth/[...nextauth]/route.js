@@ -4,11 +4,7 @@ import bcrypt from "bcryptjs"
 import User from "../../../models/user";
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-<<<<<<< HEAD
-// import GoogleProvider from "next-auth/providers/google";
-=======
 import GoogleProvider from "next-auth/providers/google";
->>>>>>> f994e90d3660b73c2c0d09e810f6a0fb7fc73968
 
 export const authOptions = {
   session:{
@@ -39,14 +35,6 @@ export const authOptions = {
             console.log(error)            
           }               
         },
-<<<<<<< HEAD
-    }), 
-    // google provider
-    // GoogleProvider({
-    //   clientId: process.env.GOOGLE_CLIENT_ID,
-    //   clientSecret: process.env.GOOGLE_CLIENT_SECRET
-    // })
-=======
     }),
         // google provider
     GoogleProvider({
@@ -54,7 +42,7 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
     
->>>>>>> f994e90d3660b73c2c0d09e810f6a0fb7fc73968
+
     
   ],
   // callbacks: {
