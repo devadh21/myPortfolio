@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-
 import { getProviders, signIn } from "next-auth/react";
 import { useEffect,useState } from "react";
 
