@@ -1,19 +1,13 @@
 "use client";
 import React from "react";
-<<<<<<< HEAD
-// import Image from "next/image";
-// import hero from "../../../public/img/login.jpg";
 import { useRouter } from "next/navigation";
 
 import { signIn } from "next-auth/react";
 import { useState } from "react";
-// import ButtonGoole from "../../components/ui/ButtonGoole"
-=======
 import { useRouter } from "next/navigation";
 
 import { getProviders, signIn } from "next-auth/react";
 import { useEffect,useState } from "react";
->>>>>>> f994e90d3660b73c2c0d09e810f6a0fb7fc73968
 
 export default async function Login() {
   interface IFormData {
@@ -29,11 +23,6 @@ export default async function Login() {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  // google provider
-
-  // const providers = await getProviders();
-=======
   useEffect(() => {
     const fetchProviders = async () => {
       const res = await getProviders();
@@ -46,8 +35,6 @@ export default async function Login() {
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
->>>>>>> f994e90d3660b73c2c0d09e810f6a0fb7fc73968
 
   const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -134,10 +121,6 @@ export default async function Login() {
                 </span>
                 <hr className="my-2 h-1  border-t-0 bg-transparent bg-gradient-to-r from-transparent via-primary to-transparent opacity-25 dark:opacity-100" />
               </div>
-<<<<<<< HEAD
-
-              {/* <ButtonGoole /> */}
-=======
               
               {providers?.google && (<button
                 className=" flex justify-center items-center gap-1 text-medium capitalize bg-bg-color-light dark:bg-bg-color hover:border-primary hover:border hover:shadow-sm hover:shadow-primary border p-4 w-full my-4  "
@@ -174,7 +157,6 @@ export default async function Login() {
                 </span>
                 <span className=" text-sm">Continue with Google</span>
               </button>)}
->>>>>>> f994e90d3660b73c2c0d09e810f6a0fb7fc73968
             </div>
           </div>
         </div>
